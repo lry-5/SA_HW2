@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 package org.springframework.samples.petclinic.model;
-import java.io.Serializable;
+// import java.io.Serializable;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -45,7 +45,7 @@ import org.springframework.samples.petclinic.model.Person;
  */
 @Entity
 @Table(name = "students")
-public class Student implements Serializable{
+public class Student extends BaseEntity{
 
     @Column(name = "sno")
 	@NotEmpty
@@ -112,5 +112,9 @@ public class Student implements Serializable{
     }
     public String getDept(){
         return dept;
+    }
+    public String toStr(){
+        return sno+","+name+","+sex+","+birthday+","
+            +birthplace+","+dept;
     }
 }

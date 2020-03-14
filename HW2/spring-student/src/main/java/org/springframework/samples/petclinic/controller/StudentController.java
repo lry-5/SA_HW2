@@ -22,6 +22,7 @@ import javax.validation.Valid;
 
 import org.springframework.samples.petclinic.model.Owner;
 import org.springframework.samples.petclinic.model.Pet;
+import org.springframework.samples.petclinic.model.Student;
 import org.springframework.samples.petclinic.repository.OwnerRepository;
 import org.springframework.samples.petclinic.repository.VisitRepository;
 import org.springframework.stereotype.Controller;
@@ -59,8 +60,21 @@ class StudentController {
 
 	@GetMapping("/insert")
 	public String insert() {
-		System.out.println("insert");
+		System.out.println("get insert");
 		return "students/insert";
 	}
 
+	@PostMapping("/insert")
+	public String insertHandler(Model model, @ModelAttribute("student") Student student){
+
+		System.out.println("post insert:"+student.toStr());
+		
+		return "students/insert";
+	}
+
+	@GetMapping("/delete")
+	public String delete() {
+		System.out.println("delete");
+		return "students/delete";
+	}
 }
