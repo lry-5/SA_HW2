@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        td{
+            text-align:center;
+            width: 100px;
+            height: auto;
+        }
+        .tab0{
+            width: 500px;
+            height:auto;
+            /*background-color: orange;*/
+            /*position: relative;*/
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            margin-top:auto;
+            margin-left: -250px;
+        }
+
+    </style>
+    <title>修改</title>
+</head>
+<body>
+    <a href="/index"><button>返回</button></a>
+    <!-- <input type=button οnclick="window.location.href('/index')"> -->
+    <form action="/update" method="post">
+        <table class="tab0">
+            <tr>
+                <th colspan="3"><p>update</p></th>
+            </tr>
+            <tr>
+                <td>
+                    <!-- <input type="text" name="id"
+                    placeholder="学号" /> -->
+                    <p>set</p>
+
+                </td>
+                <td>
+                    <!-- <input type="text" name="name"
+                    placeholder="姓名" /> -->
+                    <p>name =</p>
+                </td>
+                <td>
+                    <input type="text" name="name"
+                    placeholder="姓名" />
+                </td>                      
+            </tr>
+            <tr>
+                <td>
+                    <!-- <input type="text" name="birthday"
+                    placeholder="生日" /> -->
+                    <p>where</p>
+                </td>
+                <td>
+                    <!-- <input type="text" name="birthplace"
+                    placeholder="籍贯" /> -->
+                    <p>id =</p>
+                </td>
+                <td>
+                    <input type="text" name="id"
+                    placeholder="学号值" />
+                </td>                       
+            </tr>
+            <tr>
+                <td colspan="3"><button type="submit">确定</button></td>
+                <!-- <td><p></p></td> -->
+                <!-- <td><a href="/index"><button>返回</button></a></td> -->
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>
